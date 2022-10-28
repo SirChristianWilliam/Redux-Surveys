@@ -34,7 +34,7 @@ const support = (state = 0, action) => {
 
 const comments = (state = "", action) => {
     switch (action.type) {
-        case 'SET_COMMENTS':
+        case 'SET_COMMENT':
             return action.payload;
     }
     return state;
