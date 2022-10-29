@@ -29,3 +29,15 @@ table,th,td {
   border-collapse: collapse;
 
 }
+input {
+  margin-right: 10px;
+}
+input:not(.commentInput) {
+  width:150px;
+}
+ .commentInput {
+  width:250px;
+}
+button {
+  cursor: pointer;
+}

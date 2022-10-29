@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
-import {useDispatch} from 'react-redux';
- 
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
 function Support() {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -20,18 +20,21 @@ function Support() {
         <>
             <h1> How well are you being supported? </h1>
             <form onSubmit={handleSubmit}>
-            <input 
-                type="number"
-                onChange={evt => setNewSupport(evt.target.value)}
-                value={newSupport}
-                required
-            />
-            <button type='submit'>
-                NEXT
-          </button>
+                <input
+                    type="number"
+                    onChange={evt => setNewSupport(evt.target.value)}
+                    value={newSupport}
+                    max="5"
+                    min="0"
+                    required
+                    className='supportInput'
+                />
+                <button type='submit'>
+                    NEXT
+                </button>
 
             </form>
-         
+
         </>
     )
 }

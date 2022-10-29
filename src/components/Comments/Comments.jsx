@@ -24,6 +24,8 @@ function Comments() {
                     type="text"
                     onChange={evt => setNewComment(evt.target.value)}
                     value={newComment}
+                    maxLength={"100"}
+                    className='commentInput'
                 />
                 <button type="submit">
                     NEXT

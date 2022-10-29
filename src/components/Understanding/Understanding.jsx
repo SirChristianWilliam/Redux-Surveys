@@ -25,7 +25,11 @@ function Understanding() {
                 <input type="number"
                 onChange={evt => setNewUnderstanding(evt.target.value)}
                 value={newUnderstanding}
+                max="5"
+                min="0"
                 required
+                className='understandingInput'
+
                 />
                 <button type="submit">
                     NEXT

@@ -27,9 +27,13 @@ function Feeling() {
             <input
                 onChange={evt => setNewFeeling(evt.target.value)}
                 type="number"
+                max="5"
+                min="0"
                 value={newFeeling}
                 required
+                className='feelingInput'
             />
+            
             <button type="submit">
                 NEXT
             </button>
