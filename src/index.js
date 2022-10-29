@@ -33,10 +33,12 @@ const support = (state = 0, action) => {
 }
 
 const comments = (state = "", action) => {
+   
     switch (action.type) {
         case 'SET_COMMENT':
             return action.payload;
     }
+    console.log('HAR HAR HAR', action.payload)
     return state;
 }
 

@@ -41,7 +41,6 @@ function App() {
     })
   };
 
-
   return (
     <div className='App'>
       <Router>
@@ -63,11 +62,9 @@ function App() {
         </Route>
 
         <Route path="/support" exact>
-          <Support />
-          
+          <Support />         
         </Route>
 
-        
         <Route path="/comments" exact>
           <Comments />
          

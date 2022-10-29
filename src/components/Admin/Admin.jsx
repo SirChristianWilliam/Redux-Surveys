@@ -6,25 +6,20 @@ import { useSelector } from 'react-redux';
 
 
 function Admin() {
-    // const dispatch = useDispatch();
-    // dispatch({
-    //     type: 'SET_ADMIN',
-    //     payload: {feedbackList}
-    // })
-    const [feedbackItems,setFeedbackItems] = useState([]);
+    const [feedbackItems, setFeedbackItems] = useState([]);
     const params = useParams();
 
     useEffect(() => {
         axios({
-            method:'GET',
-            url:'/feedback'
+            method: 'GET',
+            url: '/feedback'
         })
-        .then((response) => {
-            setFeedbackItems(response.data);
-        })
-        .catch((err) => {
-            console.log('ERROR in Admin GET',err);
-        });
+            .then((response) => {
+                setFeedbackItems(response.data);
+            })
+            .catch((err) => {
+                console.log('ERROR in Admin GET', err);
+            });
     }, [params.id]);
 
     return (
@@ -39,7 +34,7 @@ function Admin() {
                         <th>Comments</th>
 
                     </tr>
-                    
+
                     {feedbackItems.map((item) => (
                         <tr key={item.id}>
                             <td>{item.feeling}</td>
@@ -48,7 +43,7 @@ function Admin() {
                             <td>{item.comments}</td>
                         </tr>
                     ))}
-                    
+
                 </tbody>
             </table>
 
