@@ -9,9 +9,6 @@ import Review from '../Review/Review';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 
-
-
-
 function App() {
 
   useEffect(() => {

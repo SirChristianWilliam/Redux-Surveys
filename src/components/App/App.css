@@ -21,3 +21,11 @@
 h4 {
   font-style: italic;
 }
+table {
+  width:100%;
+}
+table,th,td {
+  border:1px solid black;
+  border-collapse: collapse;
+
+}

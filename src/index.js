@@ -40,6 +40,7 @@ const comments = (state = "", action) => {
     return state;
 }
 
+
 // const flagged = (state = 0, action) => {
 //     return state;
 // }
