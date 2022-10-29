@@ -53,7 +53,7 @@ const storeInstance = createStore(
         feeling,
         understanding,
         support,
-        comments,
+        comments
         // flagged,
         // date
     }),
@@ -62,8 +62,8 @@ const storeInstance = createStore(
 
 
 ReactDOM.render(
-<Provider store={storeInstance} >
-<App />
-</Provider>
-, document.getElementById('root'));
+    <Provider store={storeInstance} >
+        <App />
+    </Provider>
+    , document.getElementById('root'));
 registerServiceWorker();

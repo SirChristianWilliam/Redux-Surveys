@@ -9,7 +9,41 @@ import Review from '../Review/Review';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 
+
+
+
 function App() {
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  
+  const fetchData = () => {
+    console.log('in fetchData thats whaddup');
+  
+    axios ({
+      method: 'GET',
+      url: '/feedback'
+    })
+    .then((response) => {
+      console.log('response is ',response)
+    });
+  }
+  const addData = (stuff) => {
+    console.log(stuff, "in addData");
+    axios({
+      method:'POST',
+      url:'/feedback',
+      data: stuff
+    })
+    .then(() => {
+      fetchData();
+    })
+    .catch((err) => {
+      console.log("ERROR in POST /feedback",err);
+    })
+  };
+
 
   return (
     <div className='App'>
@@ -43,7 +77,9 @@ function App() {
         </Route>
 
         <Route path="/review" exact>
-          <Review />
+          <Review 
+            addData={addData}
+            />
          
         </Route>
 
