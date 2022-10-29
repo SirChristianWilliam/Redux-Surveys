@@ -15,19 +15,17 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     let newEntry = req.body;
     console.log('ADDING NEW ENTRY', newEntry);
-    console.log(newEntry.feel,"testing");
+    console.log(newEntry.feel, "testing");
     let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
                         VALUES ($1, $2, $3, $4);`;
     pool.query(queryText, [newEntry.feel, newEntry.understand, newEntry.support, newEntry.comment])
-    .then(result => {
-        res.sendStatus(201);
-    })
-    .catch(error => {
-        console.log(`ERROR adding new entry`,error);
-        res.sendStatus(500);
-    });
+        .then(result => {
+            res.sendStatus(201);
+        })
+        .catch(error => {
+            console.log(`ERROR adding new entry`, error);
+            res.sendStatus(500);
+        });
 });
-
-
 
 module.exports = router;

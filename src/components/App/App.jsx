@@ -8,37 +8,37 @@ import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
-
+import Success from '../Success/Success';
 function App() {
 
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   const fetchData = () => {
     console.log('in fetchData thats whaddup');
-  
-    axios ({
+
+    axios({
       method: 'GET',
       url: '/feedback'
     })
-    .then((response) => {
-      console.log('response is ',response)
-    });
+      .then((response) => {
+        console.log('response is ', response)
+      });
   }
   const addData = (stuff) => {
     console.log(stuff, "in addData");
     axios({
-      method:'POST',
-      url:'/feedback',
+      method: 'POST',
+      url: '/feedback',
       data: stuff
     })
-    .then(() => {
-      fetchData();
-    })
-    .catch((err) => {
-      console.log("ERROR in POST /feedback",err);
-    })
+      .then(() => {
+        fetchData();
+      })
+      .catch((err) => {
+        console.log("ERROR in POST /feedback", err);
+      })
   };
 
   return (
@@ -53,34 +53,36 @@ function App() {
 
         <Route path="/" exact>
           <Feeling />
-         
+
         </Route>
 
         <Route path="/understanding" exact>
           <Understanding />
-         
+
         </Route>
 
         <Route path="/support" exact>
-          <Support />         
+          <Support />
         </Route>
 
         <Route path="/comments" exact>
           <Comments />
-         
+
         </Route>
 
         <Route path="/review" exact>
-          <Review 
+          <Review
             addData={addData}
-            />
-         
+          />
+
         </Route>
 
         <Route path="/admin" exact>
           <Admin />
         </Route>
-
+        <Route path="/success" exact>
+          <Success />
+        </Route>
       </Router>
     </div>
   );
