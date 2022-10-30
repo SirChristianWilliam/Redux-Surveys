@@ -10,6 +10,9 @@ function Admin({ item }) {
     const params = useParams();
 
     useEffect(() => {
+        getTheData();
+    }, [params.id]);
+    const getTheData = () => {
         axios({
             method: 'GET',
             url: '/feedback'
@@ -20,8 +23,8 @@ function Admin({ item }) {
             .catch((err) => {
                 console.log('ERROR in Admin GET', err);
             });
-    }, [params.id]);
-
+   
+        }
     const removeItem = (item) => {
         console.log("RemoveItem ID", item);
         let text = "Are you sure you'd like to delete this?";
@@ -32,7 +35,8 @@ function Admin({ item }) {
         })
             .then((response) => {
                 console.log('DELETE response',response );
-                location.reload();
+                getTheData();
+                // location.reload();
 
             })
             .catch((err) => {
