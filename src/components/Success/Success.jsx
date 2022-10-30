@@ -14,7 +14,7 @@ function Success() {
 
     return (
         <>
-            <h1 className='makeSpace'>Survey submitted successfully!</h1>
+            <h1 className='makeSpaceSurvey'>Survey submitted successfully!</h1>
             <button
                 onClick={handleSubmit}
             >Take a new survey!</button>

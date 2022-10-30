@@ -158,6 +158,11 @@ input:active {
   margin: 0px 0px 100px 65px;
 }
 
+.makeSpaceSurvey {
+  margin: 0px 0px 100px 0px;
+
+}
+
 button:not(.reviewSubmit, .headerButton, .deleteButton) {
   padding: 10px 20px;
   transform: translate(0px, -5px);
@@ -195,6 +200,18 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   text-align: center;
 }
 
+@media screen and (max-width:750px) {
+  #resultsText {
+    font-size: 30px;
+  }
+
+  #decoration {
+    font-size: 50px !important;
+    bottom: 10px !important;
+
+  }
+}
+
 @media screen and (max-width:600px) {
   .App {
     text-align: center;
@@ -224,6 +241,7 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     margin-top: -25px;
 
   }
+
 }
 
 #fbResults {
@@ -249,57 +267,70 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   animation-iteration-count: infinite;
   animation-play-state: running;
 }
+
 #resultsText {
   animation-name: wiggly;
-  animation-duration: 4s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-play-state: running;
   display: block;
 
- }
+}
 
 @keyframes starSpin {
   0% {
     transform: rotate(0deg);
-    color:black;
+    color: black;
   }
 
   25% {
     transform: rotate(180deg);
-    color:palegoldenrod;
+    color: yellow;
   }
 
   75% {
     transform: rotate(360deg);
-    color:palevioletred;
+    color: green;
   }
 
   100% {
     transform: rotate(0deg);
-    color:black;
+    color: black;
   }
 }
 
 @keyframes wiggly {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-    color:black;
-  }
-  
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-    color:white;
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    color: black;
   }
 
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-    color:black
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+    color: #033076;
+
   }
 
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-    color:white;
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+    color: black;
+    letter-spacing: 2px;
+
+
   }
+
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+    color: #033076;
+
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    color: black;
+
+  }
+
 
 }
