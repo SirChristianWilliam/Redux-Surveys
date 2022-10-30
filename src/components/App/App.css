@@ -1,5 +1,5 @@
 .App {
-  text-align: left;
+  text-align: center;
   padding: 20px 20px 300px 20px;
   box-shadow: 0px 0px 5px grey;
   margin: -20px 20px;
@@ -28,46 +28,60 @@ h4 {
 
 table {
   width: 100%;
+  text-align: left;
   /* margin-bottom:30px; */
 }
-tfoot {
-  height:60px;
-  background-color:#ececec;
-  width:100%;
-  border:none;
-}
+
 table {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px 10px;
 }
+
 th {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px 10px;
 }
+
 td {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px 10px;
 }
+
 tr {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px 10px;
 }
-tfoot td {
-  border:none;
+
+tfoot {
+  height: 60px;
+  background-color: #ececec;
+  width: 100%;
+  border: none;
 }
- 
-th{
-  padding:15px 10px;
+
+tfoot tr {
+  border: none;
+  background-color: #ececec;
+}
+
+tfoot td {
+  border: none;
+  background-color: #ececec;
+}
+
+th {
+  padding: 15px 10px;
   background-color: #cccccc;
 }
+
 tr:nth-child(odd) {
   background-color: #ececec;
 }
- 
+
 input {
   margin-right: 10px;
 }
@@ -95,19 +109,20 @@ button:hover:not(.headerButton, .deleteButton) {
 button:active:not(.headerButton, .deleteButton) {
   outline-offset: 5px;
   font-style: italic;
-  box-shadow:-2px 2px 4px grey;
+  box-shadow: -2px 2px 4px grey;
   /* border: 1px solid black; */
   /* transform: translate(0px, -6px) !important; */
 
 }
 
+/* FIX THIS */
 .aboveInput {
-  position: absolute;
+  position: absolute; 
   transform: translate(0px, -30px);
   color: #303ea0;
 
 }
-
+/* FIX THIS */
 .allForms {
   position: relative;
   margin: auto;
@@ -154,55 +169,76 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 
 .headerButton {
   position: absolute;
-  left:20px;
-  top:20px;
+  left: 20px;
+  top: 20px;
   font-size: 12px !important;
-  padding:5px 10px !important;
+  padding: 5px 10px !important;
 }
+
 .hidePrevious {
   position: absolute;
-  top:0;
-  left:0; 
-  width:45px;
-  padding:50px;
+  top: 0;
+  left: 0;
+  width: 45px;
+  padding: 50px;
   font-size: 50px;
-  background-color:#033076;
+  background-color: #033076;
   z-index: 2;
 }
+
 .deleteButton {
   background-color: white;
- }
- .deleteRow {
+}
+
+.deleteRow {
   text-align: center;
- }
- 
+}
+
 @media screen and (max-width:600px) {
   .App {
     text-align: center;
-      padding: 9px 0px 300px 0px;
-      box-shadow: 0px 0px 5px grey;
-      margin: -19px 0px;
-      
-   }
-   table,td {
+    padding: 9px 0px 300px 0px;
+    box-shadow: 0px 0px 5px grey;
+    margin: -19px 0px;
+
+  }
+
+  table,
+  td {
     padding: 10px 2px;
 
-   }
-   th {
+  }
+
+  th {
     padding: 15px 2px;
-   }
-   body {
-    padding:20px;
-   }
-   .App-header {
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  .App-header {
     width: 105%;
-    margin-left: -22px;  
+    margin-left: -22px;
     margin-top: -25px;
-    
+
   }
 }
+
 #fbResults {
-  padding: 25px;
+  margin: auto;
+  width: 75%;
+  text-align: center;
+  margin-bottom: 25px;
+  padding:30px;
   border:1px solid black;
+  position:relative;
 }
- 
+
+#decoration {
+position:absolute;
+left:10px;
+font-size:100px;
+bottom: -10px;
+color:black;
+}

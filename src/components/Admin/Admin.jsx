@@ -4,7 +4,6 @@ import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-
 function Admin() {
     const [feedbackItems, setFeedbackItems] = useState([]);
     const params = useParams();
@@ -24,7 +23,13 @@ function Admin() {
 
     return (
         <>
-            <h1 id='fbResults'> Feedback Results </h1>
+
+            <h1 id='fbResults'>
+                <span id="decoration">
+                &#10032;
+                                </span>
+                Feedback Results!
+            </h1>
             <table>
                 <tbody>
                     <tr>
@@ -49,13 +54,14 @@ function Admin() {
 
                 </tbody>
                 <tfoot>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                 </tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
             </table>
 
         </>
