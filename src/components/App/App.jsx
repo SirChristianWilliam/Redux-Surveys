@@ -9,6 +9,7 @@ import Review from '../Review/Review';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Success from '../Success/Success';
+import Header from '../Header/Header';
 function App() {
 
   useEffect(() => {
@@ -42,51 +43,49 @@ function App() {
   };
 
   return (
+    
     <>
-    <header className='App-header'>
+        <Header />
+      
+      <div className='App'>
+        <Router>
 
-          <h1 className='App-title'>Feedback!</h1>
-          <h4>Don't forget it!</h4>
-        </header>
-    <div className='App'>
-      <Router>
 
-        
 
-        <Route path="/" exact>
-          <Feeling />
+          <Route path="/" exact>
+            <Feeling />
 
-        </Route>
+          </Route>
 
-        <Route path="/understanding" exact>
-          <Understanding />
+          <Route path="/understanding" exact>
+            <Understanding />
 
-        </Route>
+          </Route>
 
-        <Route path="/support" exact>
-          <Support />
-        </Route>
+          <Route path="/support" exact>
+            <Support />
+          </Route>
 
-        <Route path="/comments" exact>
-          <Comments />
+          <Route path="/comments" exact>
+            <Comments />
 
-        </Route>
+          </Route>
 
-        <Route path="/review" exact>
-          <Review
-            addData={addData}
-          />
+          <Route path="/review" exact>
+            <Review
+              addData={addData}
+            />
 
-        </Route>
+          </Route>
 
-        <Route path="/admin" exact>
-          <Admin />
-        </Route>
-        <Route path="/success" exact>
-          <Success />
-        </Route>
-      </Router>
-    </div>
+          <Route path="/admin" exact>
+            <Admin />
+          </Route>
+          <Route path="/success" exact>
+            <Success />
+          </Route>
+        </Router>
+      </div>
     </>
   );
 }

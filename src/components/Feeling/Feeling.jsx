@@ -15,13 +15,15 @@ function Feeling() {
             type: 'SET_FEELING',
             payload: newFeeling
         });
-        history.push('/understanding');
+
+         history.push('/understanding');
     }
 
 
 
     return (
         <>
+            <span className='hidePrevious'></span>
             <h1 className='makeSpace'> How are you feeling today? </h1>
             <form 
                 onSubmit={handleSubmit}

@@ -58,12 +58,14 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+button:hover:not(.headerButton) {
   outline: 1px solid black;
 }
 
-button:active {
+button:active:not(.headerButton) {
   outline-offset: 5px;
+  font-style: italic;
+  box-shadow:-2px 2px 4px grey;
   /* border: 1px solid black; */
   /* transform: translate(0px, -6px) !important; */
 
@@ -110,7 +112,7 @@ input:active {
   margin: 0px 0px 100px 65px;
 }
 
-button:not(.reviewSubmit) {
+button:not(.reviewSubmit, .headerButton) {
   padding: 10px 20px;
   transform: translate(0px, -5px);
 }
@@ -118,4 +120,22 @@ button:not(.reviewSubmit) {
 .reviewSubmit {
   padding: 10px 20px;
 
+}
+
+.headerButton {
+  position: absolute;
+  left:20px;
+  top:20px;
+  font-size: 12px !important;
+  padding:5px 10px !important;
+}
+.hidePrevious {
+  position: absolute;
+  top:0;
+  left:0; 
+  width:45px;
+  padding:50px;
+  font-size: 50px;
+  background-color:#033076;
+  z-index: 2;
 }
