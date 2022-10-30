@@ -29,7 +29,6 @@ h4 {
 table {
   width: 100%;
   text-align: left;
-  /* margin-bottom:30px; */
 }
 
 table {
@@ -115,20 +114,14 @@ button:active:not(.headerButton, .deleteButton) {
   outline-offset: 5px;
   font-style: italic;
   box-shadow: -2px 2px 4px grey;
-  /* border: 1px solid black; */
-  /* transform: translate(0px, -6px) !important; */
-
 }
 
-/* FIX THIS */
 .aboveInput {
   position: absolute;
   transform: translate(0px, -30px);
   color: #303ea0;
-
 }
 
-/* FIX THIS */
 .allForms {
   position: relative;
   margin: auto;
@@ -140,12 +133,10 @@ input {
   padding: 5px 5px;
   font-size: 18px;
   margin: 0px 10%;
-
 }
 
 label {
   margin: 0px 9.5%;
-
 }
 
 input:focus {
@@ -165,7 +156,6 @@ input:active {
 
 .makeSpaceSurvey {
   margin: 0px 0px 100px 0px;
-
 }
 
 button:not(.reviewSubmit, .headerButton, .deleteButton) {
@@ -175,7 +165,6 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 
 .reviewSubmit {
   padding: 10px 20px;
-
 }
 
 .headerButton {
@@ -217,11 +206,9 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   #resultsText {
     font-size: 30px;
   }
-
   #decoration {
     font-size: 50px !important;
     bottom: 10px !important;
-
   }
 }
 
@@ -231,13 +218,11 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     padding: 9px 0px 300px 0px;
     box-shadow: 0px 0px 5px grey;
     margin: -19px 0px;
-
   }
 
   table,
   td {
     padding: 10px 2px;
-
   }
 
   th {
@@ -252,13 +237,11 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     width: 105%;
     margin-left: -22px;
     margin-top: -25px;
-
   }
 
   .tooltip .tooltiptext {
     width: 120px;
   }
-
 }
 
 #fbResults {
@@ -270,7 +253,6 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   border: 1px solid black;
   position: relative;
 }
-
 
 #decoration {
   position: absolute;
@@ -292,7 +274,6 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   animation-iteration-count: infinite;
   animation-play-state: running;
   display: block;
-
 }
 
 @keyframes starSpin {
@@ -300,17 +281,14 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     transform: rotate(0deg);
     color: black;
   }
-
   25% {
     transform: rotate(180deg);
     color: yellow;
   }
-
   75% {
     transform: rotate(360deg);
     color: green;
   }
-
   100% {
     transform: rotate(0deg);
     color: black;
@@ -322,34 +300,24 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     transform: translate(0, 0) rotate(0deg);
     color: black;
   }
-
   25% {
     transform: translate(5px, 5px) rotate(5deg);
     color: #033076;
-
   }
-
   50% {
     transform: translate(0, 0) rotate(0eg);
     color: black;
     letter-spacing: 2px;
-
-
   }
-
   75% {
     transform: translate(-5px, 5px) rotate(-5deg);
     color: #033076;
-
   }
-
   100% {
     transform: translate(0, 0) rotate(0deg);
     color: black;
-
   }
 }
-
 
 .flaggedFeedback {
   opacity: .8;
@@ -379,10 +347,8 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 
 .tooltip {
   position: relative;
-  /* display: inline-block; */
   border-bottom: 1px dotted black;
   cursor: help;
-
 }
 
 .tooltip .tooltiptext {
@@ -397,7 +363,6 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   transform: translate(-9px, -73px);
   z-index: 1;
   font-size: 13px;
-
 }
 
 .tooltip:hover .tooltiptext {
