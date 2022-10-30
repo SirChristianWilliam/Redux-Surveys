@@ -24,7 +24,7 @@ function Admin() {
 
     return (
         <>
-            <h1> Admin </h1>
+            <h1 id='fbResults'> Feedback Results </h1>
             <table>
                 <tbody>
                     <tr>
@@ -32,7 +32,7 @@ function Admin() {
                         <th>Understanding</th>
                         <th>Support</th>
                         <th>Comments</th>
-
+                        <th>Delete</th>
                     </tr>
 
                     {feedbackItems.map((item) => (
@@ -40,11 +40,22 @@ function Admin() {
                             <td>{item.feeling}</td>
                             <td>{item.understanding}</td>
                             <td>{item.support}</td>
-                            <td>{item.comments}</td>
+                            <td className='commentBox'>{item.comments}</td>
+                            <td className='deleteRow'>
+                                <button className='deleteButton'>&#10060;</button>
+                            </td>
                         </tr>
                     ))}
 
                 </tbody>
+                <tfoot>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                 </tfoot>
             </table>
 
         </>

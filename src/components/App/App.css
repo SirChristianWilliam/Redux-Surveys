@@ -1,6 +1,6 @@
 .App {
-  text-align: center;
-  padding: 20px;
+  text-align: left;
+  padding: 20px 20px 300px 20px;
   box-shadow: 0px 0px 5px grey;
   margin: -20px 20px;
 }
@@ -28,21 +28,51 @@ h4 {
 
 table {
   width: 100%;
+  /* margin-bottom:30px; */
 }
-
-table,
-th,
+tfoot {
+  height:60px;
+  background-color:#ececec;
+  width:100%;
+  border:none;
+}
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
 td {
   border: 1px solid black;
   border-collapse: collapse;
-
+  padding: 5px 10px;
 }
-
+tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
+tfoot td {
+  border:none;
+}
+ 
+th{
+  padding:15px 10px;
+  background-color: #cccccc;
+}
+tr:nth-child(odd) {
+  background-color: #ececec;
+}
+ 
 input {
   margin-right: 10px;
 }
 
-input:not(.commentInput) {
+input:not(.commentInput, .deleteButton) {
   width: 250px;
 }
 
@@ -58,11 +88,11 @@ button {
   font-weight: bold;
 }
 
-button:hover:not(.headerButton) {
+button:hover:not(.headerButton, .deleteButton) {
   outline: 1px solid black;
 }
 
-button:active:not(.headerButton) {
+button:active:not(.headerButton, .deleteButton) {
   outline-offset: 5px;
   font-style: italic;
   box-shadow:-2px 2px 4px grey;
@@ -112,7 +142,7 @@ input:active {
   margin: 0px 0px 100px 65px;
 }
 
-button:not(.reviewSubmit, .headerButton) {
+button:not(.reviewSubmit, .headerButton, .deleteButton) {
   padding: 10px 20px;
   transform: translate(0px, -5px);
 }
@@ -139,3 +169,40 @@ button:not(.reviewSubmit, .headerButton) {
   background-color:#033076;
   z-index: 2;
 }
+.deleteButton {
+  background-color: white;
+ }
+ .deleteRow {
+  text-align: center;
+ }
+ 
+@media screen and (max-width:600px) {
+  .App {
+    text-align: center;
+      padding: 9px 0px 300px 0px;
+      box-shadow: 0px 0px 5px grey;
+      margin: -19px 0px;
+      
+   }
+   table,td {
+    padding: 10px 2px;
+
+   }
+   th {
+    padding: 15px 2px;
+   }
+   body {
+    padding:20px;
+   }
+   .App-header {
+    width: 105%;
+    margin-left: -22px;  
+    margin-top: -25px;
+    
+  }
+}
+#fbResults {
+  padding: 25px;
+  border:1px solid black;
+}
+ 

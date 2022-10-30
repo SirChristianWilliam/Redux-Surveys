@@ -9,13 +9,14 @@ function goBack() {
 }
 
 function Header() {
-    
+
     return (
         <>
             <header className='App-header'>
                 <button
                     className="headerButton"
                     onClick={goBack}
+
                 >
                     ⬅ Previous Page
                 </button>
