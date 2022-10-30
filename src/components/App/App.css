@@ -195,9 +195,11 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 .deleteButton {
   background-color: white;
 }
+
 .deleteButton:hover {
-  outline:2px solid black;
+  outline: 2px solid black;
 }
+
 .deleteButton:active {
   outline-offset: 2px;
 }
@@ -246,6 +248,9 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     margin-left: -22px;
     margin-top: -25px;
 
+  }
+  .tooltip .tooltiptext {
+    width:120px;
   }
 
 }
@@ -339,10 +344,49 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   }
 }
 
-.flaggedFeedback {
-  background-color: blue !important;
-}
 
+.flaggedFeedback {
+  opacity: .8;
+  outline: 2px solid red;
+  background-color: #de9c9c !important;
+  outline-offset: -1px;
+}
+.theFlag {
+  font-size:20px;
+}
+.flaggedFeedback .theFlag {
+  color: red;
+}
+.notFlaggedFeedback .theFlag {
+  color:green;
+}
 .notFlaggedFeedback {
   background-color: "";
+  opacity: 1;
+  outline: "";
+  outline-offset: "";
+}
+
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden; 
+  opacity: 0.7;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  transform: translate(-9px, -73px);
+  z-index: 1;
+  font-size: 13px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

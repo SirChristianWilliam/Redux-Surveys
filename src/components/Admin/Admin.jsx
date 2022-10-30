@@ -74,7 +74,13 @@ function Admin({ item }) {
             <table>
                 <tbody>
                     <tr>
-                        <th>Flag</th>
+
+                        <th className='tooltip'>
+                            <span className="theFlag tooltiptext">
+                                (Click on a row to flag it for review)
+                            </span>
+                            Flag
+                        </th>
                         <th>Feeling</th>
                         <th>Understanding</th>
                         <th>Support</th>
@@ -83,10 +89,12 @@ function Admin({ item }) {
                     </tr>
 
                     {feedbackItems.map((item) => (
-                        <tr key={item.id} className={item.flagged ? 'flaggedFeedback' : 'notFlaggedFeedback'}>
-                            <td
-                                onClick={() => changeFlag(item.flagged, item.id)}>
-                                {item.flagged}&#9873;
+                        <tr key={item.id} className={item.flagged ? 'flaggedFeedback' : 'notFlaggedFeedback'} onClick={() => changeFlag(item.flagged, item.id)}>
+                            <td>
+                                {item.flagged}
+                                <span className='theFlag'>
+                                    &#9873;
+                                </span>
                             </td>
                             <td>{item.feeling}</td>
                             <td>{item.understanding}</td>
