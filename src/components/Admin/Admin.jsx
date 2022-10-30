@@ -4,8 +4,9 @@ import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 
-function Admin() {
+function Admin({ item }) {
     const [feedbackItems, setFeedbackItems] = useState([]);
+    const [removeBtn, setRemoveBtn] = useState(false)
     const params = useParams();
 
     useEffect(() => {
@@ -21,15 +22,36 @@ function Admin() {
             });
     }, [params.id]);
 
+    const removeItem = (item) => {
+        console.log("RemoveItem ID", item);
+        let text = "Are you sure you'd like to delete this?";
+        if(confirm(text) == true) {
+        axios({
+            method: 'DELETE',
+            url: `/feedback/${item}`
+        })
+            .then((response) => {
+                console.log('DELETE response',response );
+                location.reload();
+
+            })
+            .catch((err) => {
+                console.log('ERROR in delete', err)
+            });
+        } else {
+            return;
+        }
+    }
+
     return (
         <>
 
             <h1 id='fbResults'>
                 <span id="decoration">
-                &#10032;
+                    &#10032;
                 </span>
                 <span id="resultsText">
-                Feedback Results!
+                    Feedback Results!
                 </span>
             </h1>
             <table>
@@ -49,7 +71,11 @@ function Admin() {
                             <td>{item.support}</td>
                             <td className='commentBox'>{item.comments}</td>
                             <td className='deleteRow'>
-                                <button className='deleteButton'>&#10060;</button>
+                                <form onSubmit={() => removeItem(item.id)}>
+                                <button className='deleteButton'
+                                    
+                                >&#10060;</button>
+                                </form>
                             </td>
                         </tr>
                     ))}

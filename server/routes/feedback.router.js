@@ -29,4 +29,18 @@ router.post('/', (req, res) => {
         });
 });
 
+router.delete('/:id', (req,res) => {
+    console.log('params id is',req.params.id);
+    pool.query(`DELETE FROM "feedback" WHERE "id" = $1`, [req.params.id])
+    .then((result) => {
+        res.sendStatus(201);
+        
+
+    })
+    .catch((err) => {
+        console.log('ERROR in DELETE /:id', err);
+        res.sendStatus(500);
+    })
+});
+
 module.exports = router;

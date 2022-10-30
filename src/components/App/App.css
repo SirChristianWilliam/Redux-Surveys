@@ -195,6 +195,12 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 .deleteButton {
   background-color: white;
 }
+.deleteButton:hover {
+  outline:2px solid black;
+}
+.deleteButton:active {
+  outline-offset: 2px;
+}
 
 .deleteRow {
   text-align: center;

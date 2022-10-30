@@ -12,6 +12,7 @@ const feeling = (state = 0, action) => {
     switch (action.type) {
         case 'SET_FEELING':
             return action.payload;
+
     }
     return state;
 }
@@ -20,6 +21,7 @@ const understanding = (state = 0, action) => {
     switch (action.type) {
         case 'SET_UNDERSTANDING':
             return action.payload;
+
     }
     return state;
 }
@@ -28,6 +30,7 @@ const support = (state = 0, action) => {
     switch (action.type) {
         case 'SET_SUPPORT':
             return action.payload;
+ 
     }
     return state;
 }
@@ -38,7 +41,7 @@ const comments = (state = "", action) => {
         case 'SET_COMMENT':
             return action.payload;
     }
-    console.log('HAR HAR HAR', action.payload)
+    console.log('action.payload', action.payload)
     return state;
 }
 
