@@ -20,15 +20,26 @@ function Understanding() {
 
     return (
         <>
-            <h1> How well are you understanding the content? </h1>
-            <form onSubmit={handleSubmit}>
+            <h1 className='makeSpace'> How well are you understanding the content? </h1>
+            <form
+                onSubmit={handleSubmit}
+                className='allforms'
+            >
+                <label
+                    htmlFor='understandingInput'
+                    className='aboveInput'
+                >
+                    Understanding?
+                </label>
                 <input type="number"
-                onChange={evt => setNewUnderstanding(evt.target.value)}
-                value={newUnderstanding}
-                max="5"
-                min="0"
-                required
-                className='understandingInput'
+                    onChange={evt => setNewUnderstanding(evt.target.value)}
+                    value={newUnderstanding}
+                    max="5"
+                    min="0"
+                    placeholder="From 0-5"
+                    id="understandingInput"
+                    required
+                    className='understandingInput'
 
                 />
                 <button type="submit">

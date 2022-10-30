@@ -42,14 +42,16 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <Router>
-
-        <header className='App-header'>
+    <>
+    <header className='App-header'>
 
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
+    <div className='App'>
+      <Router>
+
+        
 
         <Route path="/" exact>
           <Feeling />
@@ -85,6 +87,7 @@ function App() {
         </Route>
       </Router>
     </div>
+    </>
   );
 }
 

@@ -22,18 +22,28 @@ function Feeling() {
 
     return (
         <>
-            <h1> How are you feeling today? </h1>
-            <form onSubmit={handleSubmit}>
+            <h1 className='makeSpace'> How are you feeling today? </h1>
+            <form 
+                onSubmit={handleSubmit}
+                className='allforms'
+            >
+            <label 
+                htmlFor='feelingInput'
+                className='aboveInput'
+            >
+                Feeling?
+            </label>
             <input
                 onChange={evt => setNewFeeling(evt.target.value)}
                 type="number"
                 max="5"
                 min="0"
+                id="feelingInput"
                 value={newFeeling}
+                placeholder="From 0-5"
                 required
                 className='feelingInput'
             />
-            
             <button type="submit">
                 NEXT
             </button>

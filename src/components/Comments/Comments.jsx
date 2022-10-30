@@ -18,13 +18,20 @@ function Comments() {
     }
     return (
         <>
-            <h1> Any comments you want to leave? </h1>
+            <h1 className='makeSpace'> Any comments you want to leave? </h1>
             <form onSubmit={handleSubmit}>
+                <label 
+                    htmlFor='commentInput'
+                    className='aboveInput'
+                >
+                    Comments    
+                </label>
                 <input
                     type="text"
                     onChange={evt => setNewComment(evt.target.value)}
                     value={newComment}
                     maxLength={"100"}
+                    id="commentInput"
                     className='commentInput'
                 />
                 <button type="submit">

@@ -29,7 +29,8 @@ function Review({ addData }) {
             });
 
             history.push('/success');
-            window.location.reload(); // This may not be what you were looking for,
+            window.location.reload();
+            // This may not be what you were looking for,
             // but is MUCH simpler and makes more sense to do. 
         }
     }
@@ -45,6 +46,7 @@ function Review({ addData }) {
                 <p>Comments: {comment}</p>
 
                 <button
+                    className='reviewSubmit'
                 >
 
                     SUBMIT

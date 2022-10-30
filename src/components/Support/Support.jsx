@@ -18,14 +18,25 @@ function Support() {
     }
     return (
         <>
-            <h1> How well are you being supported? </h1>
-            <form onSubmit={handleSubmit}>
+            <h1 className='makeSpace'> How well are you being supported? </h1>
+            <form
+                onSubmit={handleSubmit}
+                className='allforms'
+            >
+                <label
+                    htmlFor='supportInput'
+                    className='aboveInput'
+                >
+                    Support?
+                </label>
                 <input
                     type="number"
                     onChange={evt => setNewSupport(evt.target.value)}
                     value={newSupport}
                     max="5"
                     min="0"
+                    placeholder="From 0-5"
+                    id="supportInput"
                     required
                     className='supportInput'
                 />
