@@ -27,8 +27,10 @@ function Admin() {
             <h1 id='fbResults'>
                 <span id="decoration">
                 &#10032;
-                                </span>
+                </span>
+                <span id="resultsText">
                 Feedback Results!
+                </span>
             </h1>
             <table>
                 <tbody>

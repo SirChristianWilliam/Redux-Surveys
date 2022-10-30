@@ -117,11 +117,12 @@ button:active:not(.headerButton, .deleteButton) {
 
 /* FIX THIS */
 .aboveInput {
-  position: absolute; 
+  position: absolute;
   transform: translate(0px, -30px);
   color: #303ea0;
 
 }
+
 /* FIX THIS */
 .allForms {
   position: relative;
@@ -230,15 +231,75 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   width: 75%;
   text-align: center;
   margin-bottom: 25px;
-  padding:30px;
-  border:1px solid black;
-  position:relative;
+  padding: 30px;
+  border: 1px solid black;
+  position: relative;
 }
 
+
 #decoration {
-position:absolute;
-left:10px;
-font-size:100px;
-bottom: -10px;
-color:black;
+  position: absolute;
+  left: 10px;
+  font-size: 100px;
+  bottom: -10px;
+  color: black;
+  animation-name: starSpin;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+#resultsText {
+  animation-name: wiggly;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  display: block;
+
+ }
+
+@keyframes starSpin {
+  0% {
+    transform: rotate(0deg);
+    color:black;
+  }
+
+  25% {
+    transform: rotate(180deg);
+    color:palegoldenrod;
+  }
+
+  75% {
+    transform: rotate(360deg);
+    color:palevioletred;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    color:black;
+  }
+}
+
+@keyframes wiggly {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+    color:black;
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+    color:white;
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+    color:black
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+    color:white;
+  }
+
 }
