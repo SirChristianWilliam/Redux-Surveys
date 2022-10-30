@@ -9,17 +9,17 @@ I have a great grasp now on the content and am excited to create more applicatio
 I designed this app with the intention of the users in mind, as well as for the sanity of the owners of the site. For instance, the use is unable to enter all empty data, is not allowed to spam entries, and the administrator page requires you to confirm whether or not you'd like to delete an entry. 
 
 ## Screen Shot
-![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/feeling.png)
+![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/feeling.png);
 
-![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/understanding.png)
+![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/understanding.png);
 
-![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/support.png)
+![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/support.png);
 
-![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/comments.png)
+![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/comments.png);
 
-![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/review.png)
+![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/review.png);
 
-![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/admin.png)
+![Screenshot](/Users/mymac/PrimeFolder/AllTier1Projects/TIER2/week11/weekend-redux-feedback-loop/images/admin.png);
 
 ### Prerequisites
 
