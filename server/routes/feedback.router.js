@@ -43,4 +43,21 @@ router.delete('/:id', (req,res) => {
     })
 });
 
+router.put('/:id', (req,res) => {
+    let rowId = req.params.id;
+    let tOf = req.body.flagged;
+    const queryText = `UPDATE "feedback" SET "flagged" = $1 WHERE "id" = $2;`;
+
+    let queryArg = [
+        tOf,
+        rowId
+    ];
+    pool.query(queryText, queryArg)
+    .then(dbRes => res.sendStatus(201))
+    .catch(err => {
+        console.log('ERROR in PUT,',err)
+        res.sendStatus(500);
+    });
+});
+
 module.exports = router;

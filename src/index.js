@@ -30,18 +30,26 @@ const support = (state = 0, action) => {
     switch (action.type) {
         case 'SET_SUPPORT':
             return action.payload;
- 
+
     }
     return state;
 }
 
 const comments = (state = "", action) => {
-   
+
     switch (action.type) {
         case 'SET_COMMENT':
             return action.payload;
     }
     console.log('action.payload', action.payload)
+    return state;
+}
+const flagged = (state = false, action) => {
+    switch (action.type) {
+        case 'SET_FLAG':
+            return action.payload;
+    }
+    console.log('action.payload', action.payload);
     return state;
 }
 
@@ -59,8 +67,8 @@ const storeInstance = createStore(
         feeling,
         understanding,
         support,
-        comments
-        // flagged,
+        comments,
+        flagged
         // date
     }),
     applyMiddleware(logger)

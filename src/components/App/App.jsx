@@ -10,7 +10,7 @@ import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Success from '../Success/Success';
 import Header from '../Header/Header';
-
+import SpecificItem from '../SpecificItem/SpecificItem';
 function App() {
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function App() {
       })
   };
 
- 
+
 
   return (
 
@@ -52,8 +52,6 @@ function App() {
 
       <div className='App'>
         <Router>
-
-
 
           <Route path="/" exact>
             <Feeling />
@@ -87,6 +85,13 @@ function App() {
           <Route path="/success" exact>
             <Success />
           </Route>
+
+          <Route path="/specific/:id">
+            <SpecificItem
+            addData={addData}
+            />
+          </Route>
+
         </Router>
       </div>
     </>

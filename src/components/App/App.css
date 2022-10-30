@@ -337,6 +337,12 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     color: black;
 
   }
+}
 
+.flaggedFeedback {
+  background-color: blue !important;
+}
 
+.notFlaggedFeedback {
+  background-color: "";
 }

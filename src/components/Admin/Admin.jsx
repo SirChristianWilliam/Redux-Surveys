@@ -23,29 +23,42 @@ function Admin({ item }) {
             .catch((err) => {
                 console.log('ERROR in Admin GET', err);
             });
-   
-        }
+
+    }
     const removeItem = (item) => {
         console.log("RemoveItem ID", item);
         let text = "Are you sure you'd like to delete this?";
-        if(confirm(text) == true) {
-        axios({
-            method: 'DELETE',
-            url: `/feedback/${item}`
-        })
-            .then((response) => {
-                console.log('DELETE response',response );
-                getTheData();
-                // location.reload();
-
+        if (confirm(text) == true) {
+            axios({
+                method: 'DELETE',
+                url: `/feedback/${item}`
             })
-            .catch((err) => {
-                console.log('ERROR in delete', err)
-            });
+                .then((response) => {
+                    console.log('DELETE response', response);
+                    getTheData();
+                    // location.reload();
+
+                })
+                .catch((err) => {
+                    console.log('ERROR in delete', err)
+                });
         } else {
             return;
         }
     }
+
+    const changeFlag = (tOf, rowId) => {
+        console.log('Flag button clicked, currently set to:', tOf);
+        axios.put(`/feedback/${rowId}`, { flagged: !tOf })
+            .then(res => {
+                console.log(`Server response after submission: `, res);
+                getTheData();
+            })
+            .catch(err => {
+                console.log("Error updating flags");
+
+            });
+    } //End flag change
 
     return (
         <>
@@ -61,6 +74,7 @@ function Admin({ item }) {
             <table>
                 <tbody>
                     <tr>
+                        <th>Flag</th>
                         <th>Feeling</th>
                         <th>Understanding</th>
                         <th>Support</th>
@@ -69,16 +83,20 @@ function Admin({ item }) {
                     </tr>
 
                     {feedbackItems.map((item) => (
-                        <tr key={item.id}>
+                        <tr key={item.id} className={item.flagged ? 'flaggedFeedback' : 'notFlaggedFeedback'}>
+                            <td
+                                onClick={() => changeFlag(item.flagged, item.id)}>
+                                {item.flagged}&#9873;
+                            </td>
                             <td>{item.feeling}</td>
                             <td>{item.understanding}</td>
                             <td>{item.support}</td>
                             <td className='commentBox'>{item.comments}</td>
                             <td className='deleteRow'>
                                 <form onSubmit={() => removeItem(item.id)}>
-                                <button className='deleteButton'
-                                    
-                                >&#10060;</button>
+                                    <button className='deleteButton'
+
+                                    >&#10060;</button>
                                 </form>
                             </td>
                         </tr>
@@ -87,6 +105,7 @@ function Admin({ item }) {
                 </tbody>
                 <tfoot>
                     <tr>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
