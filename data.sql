@@ -10,9 +10,11 @@ CREATE TABLE "feedback" (
   "understanding" INT not null,
   "support" INT not null,
   "comments" text,
-  "flagged" boolean default false,
+  "flagged" boolean default false, 
   "date" date not null default CURRENT_DATE
 ); 
+-- flagged & date are working in the background and won't actually be displayed on the DOM, though it wouldn't be
+-- difficult to do so if desired.
 
 -- Sample feedback item
 INSERT INTO "feedback" ("flag","feeling", "understanding", "support", "comments")

@@ -381,6 +381,8 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   position: relative;
   /* display: inline-block; */
   border-bottom: 1px dotted black;
+  cursor: help;
+
 }
 
 .tooltip .tooltiptext {
@@ -395,6 +397,7 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   transform: translate(-9px, -73px);
   z-index: 1;
   font-size: 13px;
+
 }
 
 .tooltip:hover .tooltiptext {

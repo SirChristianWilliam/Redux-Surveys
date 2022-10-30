@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
+// PAGE 3
 function Support() {
     const dispatch = useDispatch();
     const history = useHistory();
     const [newSupport, setNewSupport] = useState('');
-
     const handleSubmit = (evt) => {
         evt.preventDefault();
         dispatch({
-            type: 'SET_SUPPORT',
-            payload: newSupport
+            type: 'SET_SUPPORT', //Connected to redux on the index.js file
+            payload: newSupport //Sent to the redux store
         });
         history.push('/comments');
-    }
+    };
     return (
         <>
             <h1 className='makeSpace'> How well are you being supported? </h1>
@@ -47,7 +46,7 @@ function Support() {
             </form>
 
         </>
-    )
-}
+    );
+};
 
 export default Support;

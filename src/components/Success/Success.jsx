@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-
+// PAGE 6
 function Success() {
     const history = useHistory();
-    const [newFeeling, setNewFeeling] = useState('');
-
     function handleSubmit() {
-        history.push('/');
+        history.push('/'); //Back to the home page! :)
     }
-
     return (
         <>
             <h1 className='makeSpaceSurvey'>Survey submitted successfully!</h1>
