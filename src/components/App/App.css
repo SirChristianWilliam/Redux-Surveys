@@ -82,8 +82,13 @@ tr:nth-child(odd) {
   background-color: #ececec;
 }
 
+tr:nth-child(even) {
+  background-color: white;
+}
+
 input {
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 input:not(.commentInput, .deleteButton) {
@@ -249,8 +254,9 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
     margin-top: -25px;
 
   }
+
   .tooltip .tooltiptext {
-    width:120px;
+    width: 120px;
   }
 
 }
@@ -351,15 +357,19 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   background-color: #de9c9c !important;
   outline-offset: -1px;
 }
+
 .theFlag {
-  font-size:20px;
+  font-size: 20px;
 }
+
 .flaggedFeedback .theFlag {
   color: red;
 }
+
 .notFlaggedFeedback .theFlag {
-  color:green;
+  color: green;
 }
+
 .notFlaggedFeedback {
   background-color: "";
   opacity: 1;
@@ -374,7 +384,7 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden; 
+  visibility: hidden;
   opacity: 0.7;
   background-color: black;
   color: #fff;

@@ -36,7 +36,6 @@ function Admin({ item }) {
                 .then((response) => {
                     console.log('DELETE response', response);
                     getTheData();
-                    // location.reload();
 
                 })
                 .catch((err) => {

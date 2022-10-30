@@ -8,7 +8,7 @@ function SpecificItem() {
     console.log(item, "YARYARYAYR")
     return (
         <>
-        <h2> yo </h2>
+            <h2> yo </h2>
         </>
     )
 }

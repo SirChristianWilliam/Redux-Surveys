@@ -20,11 +20,11 @@ function Comments() {
         <>
             <h1 className='makeSpace'> Any comments you want to leave? </h1>
             <form onSubmit={handleSubmit}>
-                <label 
+                <label
                     htmlFor='commentInput'
                     className='aboveInput'
                 >
-                    Comments    
+                    Comments
                 </label>
                 <input
                     type="text"

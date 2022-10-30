@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
-import {useDispatch} from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 function Feeling() {
     const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function Feeling() {
             payload: newFeeling
         });
 
-         history.push('/understanding');
+        history.push('/understanding');
     }
 
 
@@ -25,30 +25,30 @@ function Feeling() {
         <>
             <span className='hidePrevious'></span>
             <h1 className='makeSpace'> How are you feeling today? </h1>
-            <form 
+            <form
                 onSubmit={handleSubmit}
                 className='allforms'
             >
-            <label 
-                htmlFor='feelingInput'
-                className='aboveInput'
-            >
-                Feeling?
-            </label>
-            <input
-                onChange={evt => setNewFeeling(evt.target.value)}
-                type="number"
-                max="5"
-                min="0"
-                id="feelingInput"
-                value={newFeeling}
-                placeholder="From 0-5"
-                required
-                className='feelingInput'
-            />
-            <button type="submit">
-                NEXT
-            </button>
+                <label
+                    htmlFor='feelingInput'
+                    className='aboveInput'
+                >
+                    Feeling?
+                </label>
+                <input
+                    onChange={evt => setNewFeeling(evt.target.value)}
+                    type="number"
+                    max="5"
+                    min="0"
+                    id="feelingInput"
+                    value={newFeeling}
+                    placeholder="From 0-5"
+                    required
+                    className='feelingInput'
+                />
+                <button type="submit">
+                    NEXT
+                </button>
             </form>
         </>
     )

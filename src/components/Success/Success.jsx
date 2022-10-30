@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 function Success() {
     const history = useHistory();
     const [newFeeling, setNewFeeling] = useState('');
-    
+
     function handleSubmit() {
         history.push('/');
     }

@@ -88,7 +88,7 @@ function App() {
 
           <Route path="/specific/:id">
             <SpecificItem
-            addData={addData}
+              addData={addData}
             />
           </Route>
 
