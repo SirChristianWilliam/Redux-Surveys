@@ -250,6 +250,7 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   }
   table {
     padding:150px;
+    font-size:15px;
 
   }
   .hideSmall {
@@ -261,6 +262,7 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   }
   table th:last-child, table tr:last-child, table:last-child {
     border:none;
+    
   }
  
 
