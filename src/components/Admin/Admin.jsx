@@ -93,6 +93,7 @@ function Admin() {
                         <th>Understanding</th>
                         <th>Support</th>
                         <th>Comments</th>
+                        <th>Date</th>
                         <th>Delete</th>
                     </tr>
                     {feedbackItems.map((item) => ( // feedBackItems from line 6 above
@@ -116,6 +117,8 @@ function Admin() {
                             <td>{item.understanding}</td>
                             <td>{item.support}</td>
                             <td className='commentBox'>{item.comments}</td>
+                            <td>{item.date}</td>
+
                             <td className='deleteRow'>
                                 <form onSubmit={() => removeItem(item.id)}>
                                     {/* When submit button is clicked, remove that item. That process
@@ -139,6 +142,8 @@ function Admin() {
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
+
                     </tr>
                 </tfoot>
             </table>

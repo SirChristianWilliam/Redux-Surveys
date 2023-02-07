@@ -5,13 +5,13 @@ const pool = require('../modules/pool');
 
 router.get('/', (req, res) => {
     pool.query // I'm accessing "data" from the database, but I elected not to display it, it seemed unnecessary. Hope that's fine.
-        (`SELECT id, 
+    (`SELECT id, 
     feeling,  
     understanding, 
     support, 
     comments, 
     flagged, 
-    date 
+    to_char(date AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS date
     FROM "feedback" 
     ORDER BY "id" DESC;`)
         .then((result) => {

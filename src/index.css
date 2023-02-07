@@ -2,5 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: radial-gradient(#dadaee, #a8b5e4);
+  background-image: url("/images/computerbright.png");
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  /* background-position-y: -166px; */
 }

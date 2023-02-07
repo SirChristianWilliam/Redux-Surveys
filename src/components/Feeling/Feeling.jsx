@@ -18,7 +18,7 @@ function Feeling() {
         //Line 21: I used a cheap tactic to hide the previous button. For this case, I can't see any issues
         //using it this way. Whenever you are on the home page, you won't be able to "go back"
         <>
-            <span className='hidePrevious'></span>
+            <span className='hidePrevious'>Welcome!</span>
             <h1 className='makeSpace'> How are you feeling today? </h1>
             <form
                 onSubmit={handleSubmit} // When submit button down below is clicked, call the variable on line 9.
