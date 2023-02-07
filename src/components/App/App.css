@@ -1,20 +1,28 @@
 .App {
   text-align: center;
-  padding: 20px 20px 300px 20px;
+  padding: 20px 20px 200px 20px;
   /* box-shadow: 0px 0px 5px grey; */
-  margin: -20px 20px;
+  /* margin: -20px 20px; */
+  /* box-shadow: 0px 0px 549px inset black; */
+  transition:1s;
+}
+.App:hover {
+  box-shadow:0px 400px 549px inset rgba(0, 0, 0, 0.824);
 }
 
 .App-header {
-  background-image: linear-gradient(to bottom, black, transparent);  min-height: 70px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
+  background-color:#263519ed;
+  padding: 2px 0px 2px 0px;
+  color: #c6b39f;
+  /* margin-bottom: 20px; */
   text-align: center;
+  box-shadow: 0px 2px 22px #354829;
+
 }
 
 .App-title {
   font-size: 2.5em;
+  /* position: relative; */
 }
 
 .App-intro {
@@ -25,15 +33,17 @@ h4 {
   font-style: italic;
 }
 
-table {
-  width: 100%;
-  text-align: left;
-}
+ 
 
 table {
+  width: 100%;
+  text-align: center;
+  text-shadow:0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black;
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px 10px;
+  color:white;
+  box-shadow:0px 0px 5px black;
 }
 
 th {
@@ -55,33 +65,32 @@ tr {
 }
 
 tfoot {
-  height: 60px;
-  background-color: #ececec;
+   background-color: green;
   width: 100%;
   border: none;
 }
 
 tfoot tr {
   border: none;
-  background-color: #ececec;
+  background-color: green;
 }
 
 tfoot td {
   border: none;
-  background-color: #ececec;
+  background-color: #354829;
 }
 
 th {
   padding: 15px 10px;
-  background-color: #cccccc;
+  background-color: #354829;
 }
 
 tr:nth-child(odd) {
-  background-color: #ececec;
+  background-color: #c6b39f;
 }
 
 tr:nth-child(even) {
-  background-color: white;
+  background-color: #e99b44;
 }
 
 input {
@@ -118,7 +127,9 @@ button:active:not(.headerButton, .deleteButton) {
 .aboveInput {
   position: absolute;
   transform: translate(0px, -30px);
-  color: #303ea0;
+  color: #c6b3a0;
+  text-shadow: 0px 0 14px black, 0px 0 14px black, 0px 0 14px black,0px 0 14px black, 0px 0 14px black, 0px 0 14px black;
+
 }
 
 .allForms {
@@ -132,6 +143,8 @@ input {
   padding: 5px 5px;
   font-size: 18px;
   margin: 0px 10%;
+  box-shadow:    0px 0 14px black, 0px 0 14px black;
+
 }
 
 label {
@@ -150,20 +163,30 @@ input:active {
 }
 
 .makeSpace {
-  margin: 0px 0px 100px 65px;
+  margin: 0px 0px 100px 0px;
+  color: #c6b3a0;
+  text-shadow: 0px 0 14px black, 0px 0 14px black, 0px 0 14px black,0px 0 14px black, 0px 0 14px black, 0px 0 14px black;
+
 }
 
 .makeSpaceSurvey {
   margin: 0px 0px 100px 0px;
+  color: #c6b3a0;
+  text-shadow: 0px 0 14px black, 0px 0 14px black, 0px 0 14px black,0px 0 14px black, 0px 0 14px black, 0px 0 14px black;
+
 }
 
 button:not(.reviewSubmit, .headerButton, .deleteButton) {
   padding: 10px 20px;
   transform: translate(0px, -5px);
+  border: 2px solid black;
+
 }
 
 .reviewSubmit {
   padding: 10px 20px;
+  background-image: linear-gradient(to bottom, orange, transparent);
+  border: 3px solid black;
 }
 
 .headerButton {
@@ -185,6 +208,7 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
   box-shadow: 0px 0px 15px inset black;
   border-radius:0px 15px 15px 0px;
   z-index: 2;
+  color:whitesmoke;
 }
 
 .deleteButton {
@@ -216,29 +240,47 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 @media screen and (max-width:600px) {
   .App {
     text-align: center;
-    padding: 9px 0px 300px 0px;
-    box-shadow: 0px 0px 5px grey;
-    margin: -19px 0px;
-  }
+    padding: 9px 5px 0px 5px;
 
-  table,
-  td {
-    padding: 10px 2px;
+    /* box-shadow: 0px 0px 5px grey; */
+    /* margin: -19px 0px; */
   }
+  body {
+    background-position-x: -100px;
+  }
+  table {
+    padding:150px;
 
+  }
+  .hideSmall {
+    display:none;
+  }
   th {
-    padding: 15px 2px;
+    padding: 15px 0px;
+    /* overflow: scroll; */
+  }
+  table th:last-child, table tr:last-child, table:last-child {
+    border:none;
   }
  
 
   .App-header {
     width: 105%;
     margin-left: -22px;
-    margin-top: -25px;
+    margin-top: -10px;
   }
-
+  .headerButton {
+    left: 10px;
+  }
   .tooltip .tooltiptext {
     width: 120px;
+  }
+
+  .hidePrevious {
+    padding:10px;
+  }
+  .headerButton {
+    display: none;
   }
 }
 
@@ -368,5 +410,40 @@ button:not(.reviewSubmit, .headerButton, .deleteButton) {
 }
 
 form h1, form p {
-  color:black
+  color: #c6b3a0;
+  text-shadow: 0px 0 14px black, 0px 0 14px black, 0px 0 14px black,0px 0 14px black, 0px 0 14px black, 0px 0 14px black;
+
 }
+form p {
+  font-size: 35px;
+  font-style: italic;
+}
+form h1 {
+  text-decoration: underline;
+}
+form button, .makeSpaceSurvey {
+   background-image: linear-gradient(to bottom, orange, transparent);
+  border:1px solid black;
+  }
+form button:hover {
+  font-style: italic;
+}
+table td {
+padding:20px;
+}
+
+.newSurveyBtn {
+  color: #c6b3a0;
+  text-shadow: 0px 0 14px black, 0px 0 14px black, 0px 0 14px black,0px 0 14px black, 0px 0 14px black, 0px 0 14px black;
+
+}
+ .makeSpaceSurvey {
+  padding: 10px 20px;
+  background-image: linear-gradient(to bottom, orange, transparent);
+  border: 3px solid black;
+  color: black;
+  text-shadow: none;
+ }
+ .makeSpaceSurvey:hover {
+  font-style: italic;
+ }

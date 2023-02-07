@@ -7,8 +7,10 @@ function Success() {
     }
     return (
         <>
-            <h1 className='makeSpaceSurvey'>Survey submitted successfully!</h1>
+            <h1 className='newSurveyBtn'>Survey submitted successfully!</h1>
             <button
+                class="makeSpaceSurvey"
+               
                 onClick={handleSubmit}
             >Take a new survey!</button>
         </>

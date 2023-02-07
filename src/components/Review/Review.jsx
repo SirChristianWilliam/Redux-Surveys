@@ -38,7 +38,7 @@ function Review({ addData }) { // This is sent as a prop from app.jsx, to be mod
     return (
         <>
             <form onSubmit={(event) => addResponse(event)}>
-                <h1> Review Your Feedback </h1>
+                <h1> Review Your Feedback: </h1>
                 {/* These p elements grab the value of the variables from the store from lines 9-12.
                 app.jsx imports this review component and displays the return, and uses the addData prop
                 to display the values from the store  */}
