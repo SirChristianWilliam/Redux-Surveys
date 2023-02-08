@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     support, 
     comments, 
     flagged, 
-    date,
+    to_char(date AT TIME ZONE 'UTC', 'YYYY-MM-DD') AS date
     FROM "feedback" 
     ORDER BY "id" DESC;`)
         .then((result) => {
