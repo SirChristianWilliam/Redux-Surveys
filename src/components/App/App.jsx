@@ -17,6 +17,7 @@ function App() { // I may have gotten a bit redundant with some of my GET method
   }, []);
 
   const fetchData = () => {
+
     console.log('In fetchData (app.jsx)');
     axios({
       method: 'GET',
