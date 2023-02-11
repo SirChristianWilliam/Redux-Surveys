@@ -42,7 +42,7 @@ function Feeling() {
                     value={newFeeling} // setNewFeeling changes the value, while the 'final' value is given here.
                     placeholder="From 0-5"
                     required
-                    className='feelingInput'
+                    className='feelingInput' //What does this mean?
                 />
                 <button type="submit">
                     NEXT
@@ -53,3 +53,4 @@ function Feeling() {
 };
 
 export default Feeling;
+
