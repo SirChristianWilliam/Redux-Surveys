@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 // PAGE 2
+
 function Understanding() {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -14,6 +15,7 @@ function Understanding() {
         });
         history.push('/support');
     };
+    
     return (
         <>
             <h1 className='makeSpace'> How well are you understanding the content? </h1>
