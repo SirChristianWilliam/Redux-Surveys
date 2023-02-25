@@ -1,6 +1,6 @@
+require('dotenv').config()
 const pg = require('pg');
 let pool;
-
 // When our app is deployed to the internet 
 // we'll use the DATABASE_URL environment variable
 // to set the connection info: web address, username/password, db name
@@ -24,5 +24,6 @@ else {
         database: 'primeFeedback', 
     });
 }
+console.log(process.env.DATABASE_URL,'it is n');
 
 module.exports = pool;
